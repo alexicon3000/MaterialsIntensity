@@ -172,8 +172,8 @@ void testApp::draw() {
             //cout << shapes[i]->getPosition() << endl;
             
             
-//            ofPushMatrix();
-//            
+            ofPushMatrix();
+//
 //            ofPoint position = shapes[i]->getPosition();
 //            ofPoint rotation = shapes[i]->getRotation();
 //            
@@ -195,7 +195,7 @@ void testApp::draw() {
             shapes[i]->restoreTramsformGL();
 			shapes[i]->draw();
             
-            //ofPopMatrix();
+            ofPopMatrix();
 		}
 	}
 	light.disable();
