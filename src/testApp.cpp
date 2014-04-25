@@ -55,16 +55,17 @@ void testApp::setup() {
 
 	ofVec3f startLoc;
 	ofPoint dimens;
-	boundsWidth = 30.;
+	boundsWidth = 50.;
 	float hwidth = boundsWidth*.5;
 	float depth = 2.;
 	float hdepth = depth*.5;
 
-	for(int i = 0; i < 1; i++) {
+	for(int i = 0; i < 2; i++) {
 		bounds.push_back( new ofxBulletBox() );
 		if(i == 0) { // ground //
 			startLoc.set( 0., hwidth+hdepth, 0. );
-			dimens.set(boundsWidth, depth, boundsWidth);
+//			dimens.set(boundsWidth, depth, boundsWidth);
+            dimens.set(150, depth, 150);
 //		} else if (i == 1) { // back wall //
 //			startLoc.set(0, 0, hwidth+hdepth);
 //			dimens.set(boundsWidth, boundsWidth, depth);
@@ -182,12 +183,12 @@ void testApp::draw() {
 //            ofRotate(1, rotation.x, rotation.y, rotation.z);
             
             shapes[i]->transformGL();
-            ofTranslate( 0,mouseX / 100.0,0);
+            ofTranslate( 0, -1, 0);
             ofScale(0.03, 0.03, 0.03);
             
             
             ofSetColor(255,255,255);
-             squirrelModel.draw();
+            squirrelModel.draw();
             //ofCircle(0,0,0.5);
             
             
