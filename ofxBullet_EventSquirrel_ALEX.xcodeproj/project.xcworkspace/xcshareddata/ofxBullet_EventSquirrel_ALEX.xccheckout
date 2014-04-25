@@ -5,27 +5,44 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>9499890A-69D2-47E4-9AD8-F09B4656FE88</string>
+=======
+	<string>A0FCBBF7-1CD0-490F-BE0C-BD8E6B430BDB</string>
+>>>>>>> 7903ce7a9afbefb668736ddad1b0ee2d10c59b08
 	<key>IDESourceControlProjectName</key>
 	<string>ofxBullet_EventSquirrel_ALEX</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5F3F6B61-E4DC-41AA-AA59-34DEC3BA27D5</key>
 		<string>https://github.com/NickHardeman/ofxBullet.git</string>
+<<<<<<< HEAD
 		<key>786A1F86-3A6E-42C8-8D7D-4F17CC301EF3</key>
 		<string>ssh://github.com/alexicon3000/MaterialsIntensity.git</string>
+=======
+		<key>997B54E8-F826-4B66-8BB2-D4CFBAAC3766</key>
+		<string>https://github.com/alexicon3000/MaterialsIntensity.git</string>
+>>>>>>> 7903ce7a9afbefb668736ddad1b0ee2d10c59b08
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EventsSQUIRREL_Alex/ofxBullet_EventSquirrel_ALEX.xcodeproj/project.xcworkspace</string>
+	<string>MaterialsIntensity/ofxBullet_EventSquirrel_ALEX.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5F3F6B61-E4DC-41AA-AA59-34DEC3BA27D5</key>
 		<string>../../..</string>
+<<<<<<< HEAD
 		<key>786A1F86-3A6E-42C8-8D7D-4F17CC301EF3</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/alexicon3000/MaterialsIntensity.git</string>
+=======
+		<key>997B54E8-F826-4B66-8BB2-D4CFBAAC3766</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alexicon3000/MaterialsIntensity.git</string>
+>>>>>>> 7903ce7a9afbefb668736ddad1b0ee2d10c59b08
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -36,9 +53,15 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>786A1F86-3A6E-42C8-8D7D-4F17CC301EF3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>EventsSQUIRREL_Alex</string>
+=======
+			<string>997B54E8-F826-4B66-8BB2-D4CFBAAC3766</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MaterialsIntensity</string>
+>>>>>>> 7903ce7a9afbefb668736ddad1b0ee2d10c59b08
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
