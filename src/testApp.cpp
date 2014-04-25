@@ -172,6 +172,7 @@ void testApp::draw() {
             //cout << shapes[i]->getPosition() << endl;
             
             
+<<<<<<< HEAD
             ofPushMatrix();
 //
 //            ofPoint position = shapes[i]->getPosition();
@@ -182,14 +183,17 @@ void testApp::draw() {
 //            
 //            ofRotate(1, rotation.x, rotation.y, rotation.z);
             
+=======
+          
+>>>>>>> 6255405e8d7b0188d88960d6192a5d236f8aff87
             shapes[i]->transformGL();
-            ofTranslate( 0, -1, 0);
+            
+            ofTranslate( 0, 2, 0);
+            ofRotateY(-90);
+            ofRotateX(90);
             ofScale(0.03, 0.03, 0.03);
-            
-            
             ofSetColor(255,255,255);
             squirrelModel.draw();
-            //ofCircle(0,0,0.5);
             
             
             shapes[i]->restoreTramsformGL();
