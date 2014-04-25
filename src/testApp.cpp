@@ -26,9 +26,8 @@ void testApp::setup() {
     
 	int ii = 0;
 	// let's make a shape that all of the rigid bodies use, since it is faster //
-    // NEW ALEX SQUIRREL
-	//squirrelShape.loadModel("squirrel/NewSquirrel.3ds", 20);;
-    
+    // LOAD ALEX SQUIRREL
+	   
     squirrelModel.loadModel("squirrel/NewSquirrel.3ds", 20);;
     
     
