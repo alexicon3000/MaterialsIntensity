@@ -22,7 +22,6 @@ void testApp::setup() {
 	world.setCamera(&camera);
 	world.setGravity( ofVec3f(0, 25., 0) );
 
-
     
 	int ii = 0;
 	// let's make a shape that all of the rigid bodies use, since it is faster //
@@ -31,27 +30,27 @@ void testApp::setup() {
     squirrelModel.loadModel("squirrel/NewSquirrel.3ds", 20);;
     
     
-	for (int i = 0; i < 4; i++) {
-		shapes.push_back( new ofxBulletBaseShape() );
-		ii = shapes.size()-1;
-        ((ofxBulletBox*)shapes[ii])->init(boxShape);
-		((ofxBulletBox*)shapes[ii])->create(world.world, ofVec3f(ofRandom(-3, 3), ofRandom(-2, 2), ofRandom(-1, 1)), 0.2);
-		shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
-		shapes[ii]->add();
-		bColliding.push_back( false );
-	}
+//	for (int i = 0; i < 4; i++) {
+//		shapes.push_back( new ofxBulletBaseShape() );
+//		ii = shapes.size()-1;
+//        ((ofxBulletBox*)shapes[ii])->init(boxShape);
+//		((ofxBulletBox*)shapes[ii])->create(world.world, ofVec3f(ofRandom(-3, 3), ofRandom(-2, 2), ofRandom(-1, 1)), 0.2);
+//		shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
+//		shapes[ii]->add();
+//		bColliding.push_back( false );
+//	}
 
 	// now lets add some Boxes //
-	boxShape = ofBtGetBoxCollisionShape(2.65, 2.65, 2.65);
-	for (int i = 0; i < 4; i++) {
-		shapes.push_back( new ofxBulletBox() );
-		ii = shapes.size()-1;
-		((ofxBulletBox*)shapes[ii])->init(boxShape);
-		((ofxBulletBox*)shapes[ii])->create(world.world, ofVec3f(ofRandom(-3, 3), ofRandom(-2, 2), ofRandom(-1, 1)), 0.2);
-		shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
-		shapes[ii]->add();
-		bColliding.push_back( false );
-	}
+//	boxShape = ofBtGetBoxCollisionShape(2.65, 2.65, 2.65);
+//	for (int i = 0; i < 4; i++) {
+//		shapes.push_back( new ofxBulletBox() );
+//		ii = shapes.size()-1;
+//		((ofxBulletBox*)shapes[ii])->init(boxShape);
+//		((ofxBulletBox*)shapes[ii])->create(world.world, ofVec3f(ofRandom(-10, 10), ofRandom(-10, 10), ofRandom(-10, 10)), 0.2);
+//		shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
+//		shapes[ii]->add();
+//		bColliding.push_back( false );
+//	}
 
 	ofVec3f startLoc;
 	ofPoint dimens;
@@ -64,7 +63,6 @@ void testApp::setup() {
 		bounds.push_back( new ofxBulletBox() );
 		if(i == 0) { // ground //
 			startLoc.set( 0., hwidth+hdepth, 0. );
-//			dimens.set(boundsWidth, depth, boundsWidth);
             dimens.set(150, depth, 150);
 //		} else if (i == 1) { // back wall //
 //			startLoc.set(0, 0, hwidth+hdepth);
@@ -172,7 +170,7 @@ void testApp::draw() {
             //cout << shapes[i]->getPosition() << endl;
             
             
-<<<<<<< HEAD
+
             ofPushMatrix();
 //
 //            ofPoint position = shapes[i]->getPosition();
@@ -183,9 +181,7 @@ void testApp::draw() {
 //            
 //            ofRotate(1, rotation.x, rotation.y, rotation.z);
             
-=======
-          
->>>>>>> 6255405e8d7b0188d88960d6192a5d236f8aff87
+
             shapes[i]->transformGL();
             
             ofTranslate( 0, 2, 0);
@@ -224,6 +220,7 @@ void testApp::draw() {
 	ss << "add spherers (s)" << endl;
 	ss << "add boxes (b)" << endl;
 	ofDrawBitmapString(ss.str().c_str(), 10, 10);
+    
 }
 
 //--------------------------------------------------------------
@@ -257,9 +254,9 @@ void testApp::mousePickEvent( ofxBulletMousePickEvent &e ) {
 void testApp::keyPressed(int key) {
 	int ii = 0;
 
-	ofVec3f mouseLoc = camera.screenToWorld( ofVec3f((float)ofGetMouseX(), (float)ofGetMouseY(), 0) );
-	float rsize = ofRandom(.3, 1.8);
-	mouseLoc.z += 15;
+//	ofVec3f mouseLoc = camera.screenToWorld( ofVec3f((float)ofGetMouseX(), (float)ofGetMouseY(), 0) );
+//	float rsize = ofRandom(.3, 1.8);
+//	mouseLoc.z += 55;
 
 	switch (key) {
 		case OF_KEY_DEL:
@@ -274,22 +271,22 @@ void testApp::keyPressed(int key) {
 		case 'd':
 			bDrawDebug = !bDrawDebug;
 			break;
-		case 'b':
-			shapes.push_back( new ofxBulletBox() );
-			ii = shapes.size()-1;
-			((ofxBulletBox*)shapes[ii])->create(world.world, mouseLoc, rsize*.2, rsize*2, rsize*2, rsize*2);
-			shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
-			shapes[ii]->add();
-			bColliding.push_back( false );
-			break;
-		case 's':
-			shapes.push_back( new ofxBulletSphere() );
-			ii = shapes.size()-1;
-			((ofxBulletSphere*)shapes[ii])->create(world.world, mouseLoc, rsize*.2, rsize);
-			shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
-			shapes[ii]->add();
-			bColliding.push_back( false );
-			break;
+//		case 'b':
+//			shapes.push_back( new ofxBulletBox() );
+//			ii = shapes.size()-1;
+//			//((ofxBulletBox*)shapes[ii])->create(world.world, mouseLoc, rsize*.2, rsize*2, rsize*2, rsize*2);
+//			shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
+//			shapes[ii]->add();
+//			bColliding.push_back( false );
+//			break;
+//		case 's':
+//			shapes.push_back( new ofxBulletSphere() );
+//			ii = shapes.size()-1;
+//			//((ofxBulletSphere*)shapes[ii])->create(world.world, mouseLoc, rsize*.2, rsize);
+//			shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
+//			shapes[ii]->add();
+//			bColliding.push_back( false );
+//			break;
 		case 'r':
 			bRenderShapes = !bRenderShapes;
 			break;
@@ -299,6 +296,17 @@ void testApp::keyPressed(int key) {
 		case 'f':
 			bAddCenterAttract = !bAddCenterAttract;
 			break;
+        case 'p':
+            for (int i = 0; i < 4; i++) {
+                shapes.push_back( new ofxBulletBaseShape() );
+                ii = shapes.size()-1;
+                ((ofxBulletBox*)shapes[ii])->init(boxShape);
+                ((ofxBulletBox*)shapes[ii])->create(world.world, ofVec3f(ofRandom(-3, 3), ofRandom(-2, 2), ofRandom(-1, 1)), 0.2);
+                shapes[ii]->setActivationState( DISABLE_DEACTIVATION );
+                shapes[ii]->add();
+                bColliding.push_back( false );
+            }
+            break;
 		default:
 			break;
 	}
