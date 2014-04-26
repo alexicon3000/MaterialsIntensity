@@ -20,7 +20,7 @@ void testApp::setup() {
 	world.enableCollisionEvents();
 	ofAddListener(world.COLLISION_EVENT, this, &testApp::onCollision);
 	world.setCamera(&camera);
-	world.setGravity( ofVec3f(0, 25., 0) );
+	world.setGravity( ofVec3f(0, 25., 0) ); 
 
     
 	int ii = 0;
